@@ -31,6 +31,10 @@
 *.out
 *.app
 
-# Projects
+# Projects have their own git repository
 projects
+
+# Output directories
 tmp
+bags
+calibrations
