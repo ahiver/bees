@@ -1,8 +1,12 @@
 #!/bin/bash
 
-export WORKSPACE_DIR=$PWD/../..
+export WORKSPACE_DIR=~/workspace/bees
+
+
+export SCRIPTS_DIR=$WORKSPACE_DIR/scripts
 export PROJECTS_DIR=$WORKSPACE_DIR/projects
 export CONFIGS_DIR=$WORKSPACE_DIR/configs
+export TMP_DIR=$WORKSPACE_DIR/tmp
 
 export BAGS_DIR=$WORKSPACE_DIR/bags
 export CALIBRATIONS_DIR=$WORKSPACE_DIR/calibrations

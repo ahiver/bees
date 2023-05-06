@@ -1,38 +1,6 @@
 # bees
 
-# Multi machine ROS setup examples
-
-## Host is master
-
-nano /etc/hosts
-
-127.0.0.1 uNest
-192.168.1.6 bee
-
-nano ~/.bashrc
-
-source /opt/ros/noetic/setup.bash
-export ROS_MASTER_URI=http://127.0.0.1:11311
-export ROS_IP=192.168.1.9
-export ROS_HOSTNAME=uNest
-
-source ~./bashrc
-
-## Robot is slave
-
-nano /etc/hosts
-
-127.0.0.1 bee
-192.168.1.9 uNest
-
-nano ~/.bashrc
-
-source /opt/ros/noetic/setup.bash
-export ROS_MASTER_URI=http://192.168.1.3:11311
-export ROS_IP=192.168.1.6
-export ROS_HOSTNAME=bee
-
-source ~./bashrc
+Update WORKSPACE_DIR in scripts/env/setup.bash to point directory bees was cloned to
 
 # Setup Robot
 
@@ -119,5 +87,40 @@ TODO
 ## View Camera Stream online
 
 `scripts/gui/view_camera.bash`
+
+# Multi machine ROS setup examples
+
+## Host is master
+
+nano /etc/hosts
+
+127.0.0.1 uNest
+192.168.1.6 bee
+
+nano ~/.bashrc
+
+source /opt/ros/noetic/setup.bash
+export ROS_MASTER_URI=http://127.0.0.1:11311
+export ROS_IP=192.168.1.9
+export ROS_HOSTNAME=uNest
+
+source ~./bashrc
+
+## Robot is slave
+
+nano /etc/hosts
+
+127.0.0.1 bee
+192.168.1.9 uNest
+
+nano ~/.bashrc
+
+source /opt/ros/noetic/setup.bash
+export ROS_MASTER_URI=http://192.168.1.3:11311
+export ROS_IP=192.168.1.6
+export ROS_HOSTNAME=bee
+
+source ~./bashrc
+
 
 

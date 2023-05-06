@@ -23,7 +23,7 @@ OUTPUT_DIR=$CALIBRATIONS_DIR/${EXPERIMENT_NAME}/cam
 echo Press Ctrl+C to finish.
 mkdir -p $OUTPUT_DIR
 source $KALIBR_DIR/devel/setup.bash
-cd $OUTPUT_DIR
+pushd $OUTPUT_DIR
 rosrun kalibr kalibr_calibrate_cameras --target ${CALIBRATION_TARGET_PATH} --models ${CAMERA_MODEL} --topics ${CAMERA_TOPIC} --bag $BAG_PATH --bag-freq $BAG_FREQ
 echo Output path: ${OUTPUT_DIR}
-
+popd

@@ -1,8 +1,11 @@
 #!/bin/bash
+source ../env/setup.bash
 
 # Start camera ROS node
-cd $USB_CAM_DIR
+pushd $USB_CAM_DIR
 source devel/setup.bash
+popd
+
 roslaunch usb_cam usb_cam-test.launch
 
 # Start MavRos node for Flight Controller mavlink telemetry

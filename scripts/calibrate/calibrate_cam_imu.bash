@@ -36,6 +36,7 @@ echo Camera Model: ${CAMERA_MODEL}
 echo state. Press Ctrl+C to finish.
 mkdir -p $OUTPUT_DIR
 source $KALIBR_DIR/devel/setup.bash
-cd $OUTPUT_DIR
+pushd $OUTPUT_DIR
 rosrun kalibr kalibr_calibrate_imu_camera --target $CALIBRATION_TARGET_PATH --imu $IMU_CALIBRATION_PATH --imu-models calibrated --cam $CAM_CALIBRATION_PATH --bag $BAG_PATH
 echo Output path: ${OUTPUT_DIR}
+popd

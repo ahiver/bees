@@ -25,7 +25,8 @@ fi
 
 mkdir -p ${OUTPUT_DIR}
 source $ALLAN_VARIANCE_DIR/devel/setup.bash
+pushd $OUTPUT_DIR
 rosrun allan_variance_ros cookbag.py --input ${BAG_PATH} --output ${COOKED_BAG_PATH}
-cd $OUTPUT_DIR
 rosrun allan_variance_ros allan_variance . ${ALLAN_CONFIG_PATH}
 rosrun allan_variance_ros analysis.py --data allan_variance.csv --config ${ALLAN_CONFIG_PATH}
+popd

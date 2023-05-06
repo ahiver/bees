@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo i
-
 # Screen Recorder
 sudo apt install kazam
 
@@ -12,5 +10,3 @@ sudo apt-get install htop
 sudo apt-get install inxi
 
 inxi -Fxzd
-
-exit

@@ -1,4 +1,8 @@
 #!/bin/bash
 
+source ../env/setup.bash
+
 roscore
-./start_robot.bash
+pushd ${SCRIPTS_DIR}
+./start/start_robot.bash
+popd
